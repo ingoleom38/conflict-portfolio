@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConflictUI — Om</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<!-- BACKDROP (dims page behind the slide-out menu) -->
+<div class="backdrop" id="backdrop"></div>
+
+<!-- SLIDE-OUT MENU -->
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <span class="brand-mark">◆</span>
+    <span class="brand-name">CONFLICT<span class="brand-name-accent">UI</span></span>
+  </div>
+
+  <nav class="nav">
+    <a class="nav-item" href="#home"><span class="nav-ico">⌂</span><span>Home</span></a>
+    <a class="nav-item" href="#about"><span class="nav-ico">◔</span><span>About</span></a>
+    <a class="nav-item" href="#value"><span class="nav-ico">✦</span><span>Value</span></a>
+    <a class="nav-item" href="#showcase"><span class="nav-ico">◫</span><span>Showcase</span></a>
+    <a class="nav-item" href="#vision"><span class="nav-ico">⎋</span><span>Vision &amp; Mission</span></a>
+    <a class="nav-item" href="#portfolio"><span class="nav-ico">▤</span><span>Portfolio</span></a>
+    <a class="nav-item" href="#contact"><span class="nav-ico">✉</span><span>Contact</span></a>
+  </nav>
+
+  <div class="sidebar-foot">
+    <div class="user-chip">
+      <div class="user-avatar">OM</div>
+      <div class="user-meta">
+        <span class="user-name">Om</span>
+        <span class="user-role">Founder, ConflictUI</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<div class="app">
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-title">
+        <span class="topbar-brand">CONFLICT<span class="brand-name-accent">UI</span></span>
+      </div>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="hero-stage" id="stage">
+          <div class="stage-glow"></div>
+          <div class="stage-ring stage-ring--outer"></div>
+          <div class="stage-ring stage-ring--inner"></div>
+          <div class="stage-cutout" id="cutoutLayer">
+            <!-- Save your cutout as static/images/cutout.png (transparent background) -->
+            <img src="static/images/cutout.png"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                 alt="Om" class="stage-cutout-img">
+            <svg viewBox="0 0 240 320" class="stage-cutout-img stage-cutout-fallback" style="display:none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="120" cy="86" r="54" fill="url(#g1)"/>
+              <path d="M40 320 C40 210 78 172 120 172 C162 172 200 210 200 320 Z" fill="url(#g2)"/>
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="var(--accent-1)"/><stop offset="1" stop-color="var(--accent-2)"/>
+                </linearGradient>
+                <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="var(--accent-2)"/><stop offset="1" stop-color="var(--surface-2)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="stage-particles" id="particles"></div>
+        </div>
+
+        <div class="hero-info">
+          <span class="hero-eyebrow">Founder — ConflictUI</span>
+          <h1>Om</h1>
+          <p>CSE diploma holder building real, working software — college projects, shop websites, and small-business systems, in whatever stack the job needs.</p>
+          <div class="hero-tags">
+            <span>Java</span><span>Python</span><span>AI/ML</span><span>PHP</span><span>JavaScript</span><span>MySQL</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <span class="section-eyebrow">About</span>
+        <h2>Diploma to delivery</h2>
+        <div class="about-grid">
+          <p class="about-text">
+            I'm a Computer Science Engineering diploma holder from <strong>Government Polytechnic, Amravati</strong>.
+            Through the diploma and a set of web development certification courses, I worked through Java, Python,
+            AI/ML, HTML, PHP, JavaScript, C, C++, Data Structures, and MySQL. I interned at
+            <strong>Litbros Pvt Ltd</strong>, where I built and shipped several projects independently, end to end —
+            from a restaurant ordering system to an AI-assisted career guidance platform. ConflictUI is where that
+            experience now goes to work for other people.
+          </p>
+          <ul class="skill-grid">
+            <li>Java</li><li>Python</li><li>AI / ML</li><li>HTML</li><li>PHP</li>
+            <li>JavaScript</li><li>C</li><li>C++</li><li>Data Structures</li><li>MySQL</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- VALUE PROPOSITION -->
+      <section id="value" class="section">
+        <span class="section-eyebrow">Why ConflictUI</span>
+        <h2>Built solo. Shipped working.</h2>
+        <div class="value-grid">
+          <div class="value-card">
+            <span class="value-num">01</span>
+            <h3>One person, whole stack</h3>
+            <p>No handoffs between designer, backend, and database — every project is built end-to-end by the same person who understands all of it.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-num">02</span>
+            <h3>Built for students and shops</h3>
+            <p>College final-year projects and small shop/business websites, scoped and priced for real student and small-business budgets.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-num">03</span>
+            <h3>Any stack that fits</h3>
+            <p>Flask, PHP, plain JS, MySQL — the language and stack are chosen for what the project needs, not forced into one template.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-num">04</span>
+            <h3>Demo-ready, not just mockups</h3>
+            <p>Every project is delivered as a working, deployed system — ready for a viva, a client demo, or actual daily use.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEDIA SHOWCASE (certificates) -->
+      <section id="showcase" class="section">
+        <span class="section-eyebrow">Media Showcase</span>
+        <h2>Certifications</h2>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <img src="static/images/certificates/certi.jpeg" alt="Certificate">
+          </div>
+          <div class="cert-card">
+            <img src="static/images/certificates/cfrti.jpeg" alt="Certificate">
+          </div>
+          <div class="cert-card">
+            <img src="static/images/certificates/cifrti++.jpeg" alt="Certificate">
+          </div>
+          <div class="cert-card">
+            <img src="static/images/certificates/dbms.jpeg" alt="Certificate">
+          </div>
+          <div class="cert-card">
+            <img src="static/images/certificates/java.jpeg" alt="Certificate">
+          </div>
+          <div class="cert-card">
+            <img src="static/images/certificates/WhatsApp Image 2026-08-03 at 4.12.03 PM.jpeg" alt="Certificate">
+          </div>
+        </div>
+      </section>
+
+      <!-- VISION & MISSION -->
+      <section id="vision" class="section">
+        <span class="section-eyebrow">Direction</span>
+        <h2>Vision &amp; Mission</h2>
+        <div class="vision-grid">
+          <div class="vision-card">
+            <h3>Vision</h3>
+            <p>To be the studio students and small shop owners turn to first — for software that actually works, not just something that looks finished in a screenshot.</p>
+          </div>
+          <div class="vision-card">
+            <h3>Mission</h3>
+            <p>Build every project like it's going into production: functional, documented, and demoable — while keeping it affordable for students and small business owners.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="section">
+        <span class="section-eyebrow">Portfolio</span>
+        <h2>Projects</h2>
+        <div class="portfolio-grid">
+
+        <a class="nav-item" href="#">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="static/images/projects/restaurant.png" alt="Smart Restaurant Management"
+                   onerror="this.parentElement.classList.add('project-media--empty'); this.remove();">
+            </div>
+            <h3>Smart Restaurant Management</h3>
+            <p>End-to-end restaurant system with online and offline ordering plus table booking — built solo.</p>
+          </article>
+        </a>
+
+        <a class="nav-item" href="#">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="static/images/projects/dataviz.png" alt="Data Visualization"
+                   onerror="this.parentElement.classList.add('project-media--empty'); this.remove();">
+            </div>
+            <h3>Data Visualization</h3>
+            <p>Interactive dashboards that turn raw data into charts people can actually act on.</p>
+          </article>
+        </a>
+
+        <a class="nav-item" href="#">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="static/images/projects/career-guidance.png" alt="Career Guidance Platform"
+                   onerror="this.parentElement.classList.add('project-media--empty'); this.remove();">
+            </div>
+            <h3>Career Guidance Platform</h3>
+            <p>A guidance bot that builds resumes, scans and scores them for ATS compatibility, and lays out a roadmap for the user's career.</p>
+          </article>
+        </a>
+
+        <a class="nav-item" href="#">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="static/images/projects/garbage-detection.png" alt="Garbage Detection System"
+                   onerror="this.parentElement.classList.add('project-media--empty'); this.remove();">
+            </div>
+            <h3>Garbage Detection System</h3>
+            <p>Detects garbage type and location, then automatically assigns the nearest available employee.</p>
+          </article>
+        </a>
+
+        <a class="nav-item" href="#">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="static/images/projects/hospital.png" alt="Hospital Management Website"
+                   onerror="this.parentElement.classList.add('project-media--empty'); this.remove();">
+            </div>
+            <h3>Hospital Management Website</h3>
+            <p>Genirth — a hospital ERP spanning hospital, doctor, lab, medical store, and patient modules.</p>
+          </article>
+        </a>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark">◆</span>
+        <span class="brand-name">CONFLICT<span class="brand-name-accent">UI</span></span>
+        <p>Projects for college submissions, shops, and small businesses.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="mailto:your.email@example.com">ingoleom38@gmail.com</a>
+        <a href="tel:+919096364759">+91 90963 64759a>
+        <a href="https://instagram.com/arpit_ingole_07" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/om-ingole-550bb736a" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> ConflictUI. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+(function () {
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const menuBtn = document.getElementById('menuBtn');
+  const sidebar = document.getElementById('sidebar');
+  const backdrop = document.getElementById('backdrop');
+  const stage = document.getElementById('stage');
+  const cutout = document.getElementById('cutoutLayer');
+  const particlesWrap = document.getElementById('particles');
+
+  /* ---------- THEME ---------- */
+  const savedTheme = localStorage.getItem('forge-theme') || 'dark';
+  root.setAttribute('data-theme', savedTheme);
+  themeToggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('forge-theme', next);
+  });
+
+  /* ---------- SLIDE-OUT MENU ---------- */
+  function openMenu() {
+    sidebar.classList.add('open');
+    backdrop.classList.add('visible');
+    menuBtn.classList.add('is-open');
+  }
+  function closeMenu() {
+    sidebar.classList.remove('open');
+    backdrop.classList.remove('visible');
+    menuBtn.classList.remove('is-open');
+  }
+  menuBtn.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  backdrop.addEventListener('click', closeMenu);
+  document.addEventListener('click', (e) => {
+    if (sidebar.classList.contains('open') && !sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  document.querySelectorAll('.nav-item').forEach((item) => {
+    item.addEventListener('click', closeMenu);
+  });
+
+  /* ---------- 3D TILT ON HERO CUTOUT ---------- */
+  const maxTilt = 16;
+  function tiltFromPoint(x, y, rect) {
+    const px = (x - rect.left) / rect.width;
+    const py = (y - rect.top) / rect.height;
+    const rotateY = (px - 0.5) * maxTilt * 2;
+    const rotateX = (0.5 - py) * maxTilt * 2;
+    cutout.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+  }
+  if (window.matchMedia('(hover: hover)').matches) {
+    stage.addEventListener('mousemove', (e) => tiltFromPoint(e.clientX, e.clientY, stage.getBoundingClientRect()));
+    stage.addEventListener('mouseleave', () => { cutout.style.transform = 'rotateX(0) rotateY(0) translateZ(0)'; });
+  } else {
+    let hasGyro = false;
+    window.addEventListener('deviceorientation', (e) => {
+      if (e.beta === null) return;
+      hasGyro = true;
+      const rotateX = Math.max(-maxTilt, Math.min(maxTilt, (e.beta - 45) * -0.4));
+      const rotateY = Math.max(-maxTilt, Math.min(maxTilt, e.gamma * 0.4));
+      cutout.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+    });
+    stage.addEventListener('touchstart', (e) => { if (!hasGyro) { const t = e.touches[0]; tiltFromPoint(t.clientX, t.clientY, stage.getBoundingClientRect()); } });
+    stage.addEventListener('touchend', () => { if (!hasGyro) cutout.style.transform = 'rotateX(0) rotateY(0) translateZ(0)'; });
+  }
+
+  /* ---------- FLOATING PARTICLES ---------- */
+  for (let i = 0; i < 14; i++) {
+    const p = document.createElement('span');
+    const size = 2 + Math.random() * 4;
+    p.style.width = `${size}px`; p.style.height = `${size}px`;
+    p.style.left = `${Math.random() * 100}%`; p.style.top = `${Math.random() * 100}%`;
+    p.style.opacity = (0.3 + Math.random() * 0.5).toFixed(2);
+    p.style.animation = `float ${6 + Math.random() * 8}s ease-in-out ${Math.random() * 4}s infinite`;
+    particlesWrap.appendChild(p);
+  }
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = `@keyframes float{0%,100%{transform:translateY(0) translateX(0);}50%{transform:translateY(-18px) translateX(8px);}}`;
+  document.head.appendChild(styleSheet);
+
+  /* ---------- FOOTER YEAR ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
